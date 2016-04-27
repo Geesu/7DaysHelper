@@ -1,0 +1,4 @@
+.DS_Store
+7daysHelper/bin/*
+7daysHelper/obj/*
+.vs

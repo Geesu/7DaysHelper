@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="7 Days Helper" />
+		<Description value="Helper that gives you more information about the server you are on" />
+		<Author value="Josh 'Geesu' Becker" />
+		<Version value="1" />
+		<Website value="http://geesu.net" />
+	</ModInfo>
+</xml>
