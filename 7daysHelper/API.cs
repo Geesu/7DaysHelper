@@ -9,9 +9,9 @@ namespace _7daysHelper
 
     public class API : ModApiAbstract
     {
-        public override bool ChatMessage(ClientInfo _cInfo, string _message, string _playerName)
+        public override bool ChatMessage(ClientInfo _cInfo, EnumGameMessages _type, string _msg, string _mainName, bool _localizeMain, string _secondaryName, bool _localizeSecondary)
         {
-            return ChatHook.Hook(_cInfo, _message, _playerName);
+            return ChatHook.Hook(_cInfo, _type, _msg, _mainName, _localizeMain, _secondaryName, _localizeSecondary);
         }
 
         //public override void GameAwake()

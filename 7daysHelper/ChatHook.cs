@@ -30,7 +30,7 @@ namespace _7daysHelper
             minute = (((int)((((double)time) / 1000.0) * 60.0)) % 60);
         }
 
-        public static bool Hook(ClientInfo _cInfo, string _message, string _playerName)
+        public static bool Hook(ClientInfo _cInfo, EnumGameMessages _type, string _message, string _mainName, bool _localizeMain, string _secondaryName, bool _localizeSecondary)
         {
             if (!string.IsNullOrEmpty(_message))
             {
@@ -104,7 +104,7 @@ namespace _7daysHelper
                         String response = String.Format("[{0}]Next horde in {1} days, {2} hours, {3} minutes. Prepare![-]", color, daysUntilHorde, hourUntilHorde, minutesUntilHorde);
                         if (_cInfo != null)
                         { 
-                            _cInfo.SendPackage(new NetPackageGameMessage(response, ""));
+                            _cInfo.SendPackage(new NetPackageGameMessage(_type, response, _mainName, _localizeMain, _secondaryName, _localizeSecondary));
                         }
                         else
                         {
@@ -116,7 +116,7 @@ namespace _7daysHelper
                         String response = String.Format("[ff0000]Day 7 Horde is now![-]");
                         if (_cInfo != null)
                         {
-                            _cInfo.SendPackage(new NetPackageGameMessage(response, ""));
+                            _cInfo.SendPackage(new NetPackageGameMessage(_type, response, _mainName, _localizeMain, _secondaryName, _localizeSecondary));
                         }
                         else
                         {
